@@ -1,12 +1,13 @@
+// import React from "react";
 import "./App.css";
 import Heading from "./components/Heading";
-import Sapi from "./components/Hero";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <>
       <Heading />
-      <Sapi />
+      <Hero />
     </>
   );
 }
