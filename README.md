@@ -1,3 +1,3 @@
 # React + Vite
 
-A Greeting App crafterd with ❤
+A Greeting App crafted with ❤
