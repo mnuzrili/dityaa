@@ -11,12 +11,12 @@
 }
 
 body {
-  background-color: #581c87;
+  background: #581c87;
 }
 
 h1 {
   font-family: "Karnatic Arcade";
-  letter-spacing: 8px;
+  letter-spacing: 10px;
 }
 
 p {
