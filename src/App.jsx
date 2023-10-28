@@ -4,6 +4,7 @@ import Stars from "./components/Stars";
 import Heading from "./components/Heading";
 import Hero from "./components/Hero";
 import Envelope from "./components/Envelope";
+// import Music from "./components/Music";
 import Footer from "./components/Footer";
 import Sapi from "./assets/img/sapihead.png";
 // import { loadSlim } from "tsparticles-slim";
@@ -16,6 +17,7 @@ function App() {
         <Heading />
         <Hero />
         <Envelope />
+        {/* <Music /> */}
         <div className="relative h-32 w-full">
           <div className="absolute inset-x-0 bottom-0 h-16">
             <Footer />

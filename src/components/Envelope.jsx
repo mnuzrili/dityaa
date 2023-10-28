@@ -1,12 +1,31 @@
+import sound from "../assets/music/sepuh.mp3";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faEnvelopeOpen,
+  faPlay,
+  faStop,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Envelope = () => {
   let [isOpen, setIsOpen] = useState(false);
+  let [isPlay, setPLay] = useState(false);
+  let [audio] = useState(new Audio(sound));
   const envelopeClose = <FontAwesomeIcon icon={faEnvelope} />;
   const envelopeOpen = <FontAwesomeIcon icon={faEnvelopeOpen} />;
+  const soundPlay = <FontAwesomeIcon icon={faPlay} />;
+  const soundStop = <FontAwesomeIcon icon={faStop} />;
+
+  const stopAudio = () => {
+    setPLay(false);
+    audio.pause();
+  };
+  const playAudio = () => {
+    setPLay(true);
+    audio.play();
+  };
 
   function closeModal() {
     setIsOpen(false);
@@ -25,16 +44,23 @@ const Envelope = () => {
         >
           {isOpen ? envelopeOpen : envelopeClose}
         </button>
+        <button
+          type="button"
+          onClick={() => (isPlay ? stopAudio() : playAudio())}
+          className="ml-2 rounded-md bg-black/20 px-4 py-2 text-2xl font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+        >
+          {isPlay ? soundStop : soundPlay}
+        </button>
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
-            enter="ease-out duration-300"
+            enter="ease-out duration-500"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="ease-in duration-200"
+            leave="ease-in duration-500"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
@@ -45,10 +71,10 @@ const Envelope = () => {
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
-                enter="transition ease-in-out duration-300 transform"
+                enter="transition ease-in-out duration-500 transform"
                 enterFrom="-translate-x-full"
                 enterTo="translate-x-0"
-                leave="transition ease-in-out duration-300 transform"
+                leave="transition ease-in-out duration-500 transform"
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
