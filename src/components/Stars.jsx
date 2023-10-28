@@ -29,7 +29,7 @@ const Stars = () => {
         fpsLimit: 120,
         particles: {
           color: {
-            value: "#db2777",
+            value: "#ffffff",
           },
           move: {
             direction: "none",

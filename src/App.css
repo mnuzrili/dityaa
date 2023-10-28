@@ -10,8 +10,22 @@
   text-align: center;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
   background: #581c87;
+  /* background: linear-gradient(#b5e48c, #457b9d); */
+  /* background-image: linear-gradient(
+    to right top,
+    #581c87,
+    #711886,
+    #881584,
+    #9c1480,
+    #ae177c
+  ); */
 }
 
 h1 {
