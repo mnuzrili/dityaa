@@ -36,18 +36,18 @@ const Envelope = () => {
   }
   return (
     <>
-      <div className="mt-2 flex items-center justify-center">
+      <div className="mt-5 flex items-center justify-center">
         <button
           type="button"
           onClick={openModal}
-          className="rounded-md bg-black/20 px-4 py-2 text-2xl font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+          className="animate-bounce rounded-md bg-black/20 px-4 py-2 text-2xl font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
         >
           {isOpen ? envelopeOpen : envelopeClose}
         </button>
         <button
           type="button"
           onClick={() => (isPlay ? stopAudio() : playAudio())}
-          className="ml-2 rounded-md bg-black/20 px-4 py-2 text-2xl font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+          className="animate-bounce animation-delay-150 ml-2 rounded-md bg-black/20 px-4 py-2 text-2xl font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
         >
           {isPlay ? soundStop : soundPlay}
         </button>

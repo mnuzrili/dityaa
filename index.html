@@ -5,8 +5,29 @@
     <link rel="icon" type="image/png" href="/src/assets/img/sapihead.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Congratulations!</title>
+    <style>
+      #root {
+        opacity: 0;
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeInAnimation {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="spinner" class="container">
+      <div class="loading"></div>
+      <!-- <img src="./src/assets/img/sapihead.png" /> -->
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
