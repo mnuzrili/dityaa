@@ -3,11 +3,19 @@
   font-family: "Karnatic Arcade";
   src: url("./assets/font/ka1.ttf");
 }
+@font-face {
+  font-family: "Pixeled";
+  src: url("./assets/font/Pixeled.ttf");
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.text-custom {
+  font-family: "Pixeled";
 }
 
 html {
@@ -34,7 +42,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Roboto";
+  font-family: "Pixeled";
   letter-spacing: 4px;
   font-weight: 900;
 }
