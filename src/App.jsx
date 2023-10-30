@@ -8,9 +8,6 @@ import Maintenance from "./components/Maintenance";
 import Footer from "./components/Footer";
 import Sapi from "./assets/img/sapihead.png";
 // import { loadSlim } from "tsparticles-slim";
-
-const env = "dev";
-
 const Main = () => {
   return (
     <>
@@ -28,16 +25,17 @@ const Main = () => {
 };
 
 function App() {
+  console.log(import.meta.env.VITE_PARAM);
   return (
     <>
       <div
         className={
-          env == "dev"
+          import.meta.env.VITE_PARAM == "true"
             ? "flex flex-col items-center justify-center h-screen"
             : "flex flex-col items-center justify-center"
         }
       >
-        {env == "dev" ? <Maintenance /> : Main()}
+        {import.meta.env.VITE_PARAM == "true" ? <Maintenance /> : Main()}
       </div>
       <Stars />
     </>
