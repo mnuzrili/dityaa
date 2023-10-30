@@ -94,7 +94,7 @@ const Envelope = () => {
                       it!
                       <br />
                       <br />
-                      {"Once again, Congrats :)"}
+                      {"Once again, Congrats! n hope u like it :)"}
                     </p>
                   </div>
 
