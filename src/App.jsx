@@ -34,7 +34,7 @@ function App() {
   const propsOut = useSpring({
     to: { opacity: 0 },
     from: { opacity: 1 },
-    delay: 3000,
+    delay: 5000,
     config: {
       duration: 1000, // duration for the whole animation form start to end
     },
@@ -43,7 +43,7 @@ function App() {
   const propsIn = useSpring({
     to: { opacity: 1 },
     from: { opacity: 0 },
-    delay: 4100,
+    delay: 6100,
     config: {
       duration: 1500, // duration for the whole animation form start to end
     },
@@ -53,7 +53,7 @@ function App() {
     // Wait for 3 seconds
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000);
+    }, 6000);
   }, []);
 
   const override = `
