@@ -22,18 +22,19 @@ const Envelope = () => {
     setPLay(false);
     audio.pause();
   };
+
   const playAudio = () => {
     setPLay(true);
     audio.play();
   };
 
-  function closeModal() {
+  const closeModal = () => {
     setIsOpen(false);
-  }
+  };
 
-  function openModal() {
+  const openModal = () => {
     setIsOpen(true);
-  }
+  };
   return (
     <>
       <div className="mt-5 flex items-center justify-center">

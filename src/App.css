@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.text-custom {
+.font-custom {
   font-family: "Pixeled";
 }
 
@@ -42,7 +42,6 @@ h1 {
 }
 
 h2 {
-  font-family: "Pixeled";
   letter-spacing: 4px;
   font-weight: 900;
 }
