@@ -90,7 +90,7 @@ const Envelope = () => {
                     <p className="text-md text-gray-500">
                       I know this is actually not that difficult for u, but i
                       know u&apos;re doing ur best to get this far. Pretty,
-                      brains, kinds and now a master too? Wow, you’ve really got
+                      brains, kinds and now a master too? Wow, u’ve really got
                       it!
                       <br />
                       <br />
