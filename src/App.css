@@ -14,6 +14,10 @@
   text-align: center;
 }
 
+.running {
+  border-radius: 0px !important;
+}
+
 .font-custom {
   font-family: "Pixeled";
 }

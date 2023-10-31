@@ -50,7 +50,6 @@ function App() {
   });
 
   useEffect(() => {
-    // Wait for 3 seconds
     setTimeout(() => {
       setIsLoading(false);
     }, 6500);
@@ -69,7 +68,12 @@ function App() {
       {isLoading ? (
         <animated.div style={propsOut}>
           <div className={"flex flex-col items-center justify-center h-screen"}>
-            <PacmanLoader color={"#ffffff"} cssOverride={override} size={50} />
+            <PacmanLoader
+              loading={isLoading}
+              color={"#ffffff"}
+              cssOverride={override}
+              size={50}
+            />
           </div>
         </animated.div>
       ) : (
