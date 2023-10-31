@@ -33,17 +33,17 @@ function App() {
 
   const propsOut = useSpring({
     to: { opacity: 0 },
-    from: { opacity: 1 },
+    from: { opacity: 0.7 },
     delay: 5000,
     config: {
-      duration: 1000, // duration for the whole animation form start to end
+      duration: 1500, // duration for the whole animation form start to end
     },
   });
 
   const propsIn = useSpring({
     to: { opacity: 1 },
     from: { opacity: 0 },
-    delay: 6100,
+    delay: 7500,
     config: {
       duration: 1500, // duration for the whole animation form start to end
     },
@@ -53,17 +53,15 @@ function App() {
     // Wait for 3 seconds
     setTimeout(() => {
       setIsLoading(false);
-    }, 6000);
+    }, 6500);
   }, []);
 
-  const override = `
-
-  display: block;
-
-  margin: 0 auto;
-
-  border-color: red;
-`;
+  const override = {
+    display: "block",
+    marginRight: "100px",
+    borderColor: "white",
+    opacity: "0.7",
+  };
 
   return (
     <>
@@ -71,12 +69,7 @@ function App() {
       {isLoading ? (
         <animated.div style={propsOut}>
           <div className={"flex flex-col items-center justify-center h-screen"}>
-            <PacmanLoader
-              color={"#ffffff"}
-              isLoading={isLoading}
-              css={override}
-              size={50}
-            />
+            <PacmanLoader color={"#ffffff"} cssOverride={override} size={50} />
           </div>
         </animated.div>
       ) : (
