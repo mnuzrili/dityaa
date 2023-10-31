@@ -38,7 +38,7 @@ const Stars = () => {
               default: "bounce",
             },
             random: false,
-            speed: 1,
+            speed: 0.2,
             straight: false,
           },
           number: {
@@ -49,16 +49,23 @@ const Stars = () => {
             value: 50,
           },
           opacity: {
-            value: 0.5,
+            value: 0.8,
+            random: false,
+            animation: {
+              enable: true,
+              speed: 1,
+              minimumValue: 0.1,
+              sync: false,
+            },
           },
           shape: {
-            type: "star",
+            type: "square",
             options: {
               sides: 5,
             },
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 2, max: 10 },
           },
         },
         detectRetina: true,
