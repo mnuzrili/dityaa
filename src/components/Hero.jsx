@@ -12,7 +12,7 @@ const Hero = () => {
         </div>
       </span>
       <h2 className="sm:text-md md:text-lg lg:text-xl xl:text-2xl text-sm text-bold text-white font-custom mb-2">
-        On Your Master Degree!
+        On Your Master&apos;s Degree!
       </h2>
     </>
   );
