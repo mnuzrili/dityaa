@@ -4,7 +4,7 @@ import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, i
 
 const Stars = () => {
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
+    // console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -12,8 +12,8 @@ const Stars = () => {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+  const particlesLoaded = useCallback(async () => {
+    await console.log("Hii, u found me :)");
   }, []);
   return (
     <Particles
