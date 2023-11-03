@@ -10,7 +10,7 @@ import Envelope from "./components/Envelope";
 import Maintenance from "./components/Maintenance";
 import Footer from "./components/Footer";
 import Sapi from "./assets/img/sapihead.png";
-import { animated, useSpring } from "react-spring";
+import { animated, useSpring } from "@react-spring/web";
 // import { loadSlim } from "tsparticles-slim";
 const Main = () => {
   return (
@@ -32,8 +32,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   const propsOut = useSpring({
+    from: { opacity: 0.9 },
     to: { opacity: 0 },
-    from: { opacity: 0.7 },
     delay: 5000,
     config: {
       duration: 1500, // duration for the whole animation form start to end
@@ -41,8 +41,8 @@ function App() {
   });
 
   const propsIn = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
+    from: { opacity: 0, scale: 0, filter: "blur(40px)" },
+    to: { opacity: 1, scale: 1, filter: "blur(0)" },
     delay: 7500,
     config: {
       duration: 1500, // duration for the whole animation form start to end
