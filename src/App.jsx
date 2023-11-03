@@ -56,10 +56,10 @@ function App() {
   }, []);
 
   const override = {
-    display: "block",
+    // display: "block",
     marginRight: "100px",
     borderColor: "white",
-    opacity: "0.7",
+    opacity: "0.9",
   };
 
   return (
