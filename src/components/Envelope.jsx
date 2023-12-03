@@ -88,10 +88,10 @@ const Envelope = () => {
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-md text-gray-500">
-                      I know this is actually not that difficult for you, but I
-                      know you&apos;re doing your best to get this far. Pretty,
-                      brainy, kind, and now a master too? Wow, you&apos;ve
-                      really got it!
+                      I know this may not be particularly difficult for you, but
+                      I recognize that you&apos;re putting in your best effort
+                      to get this far. Pretty, brainy, kind, and now a master
+                      too? Wow, you&apos;ve really got it!
                       <br />
                       <br />
                       {"Once again, Congrats! n hope u like it :)"}
