@@ -65,7 +65,12 @@ const Envelope = () => {
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog
+          as="div"
+          className="relative z-10"
+          onClose={closeModal}
+          PaperProps={{ sx: { borderRadius: "10px" } }}
+        >
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-500"
@@ -75,7 +80,7 @@ const Envelope = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black/80" />
+            <div className="fixed inset-0 bg-black/40" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -89,7 +94,7 @@ const Envelope = () => {
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all border-4 border-black">
                   <Dialog.Title
                     as="h3"
                     className="text-xl font-medium leading-6 text-gray-900"
@@ -111,7 +116,7 @@ const Envelope = () => {
                   <div className="mt-4">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-purple-100 px-4 py-2 text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-purple-100 px-4 py-2 text-sm font-medium text-purple-900 hover:bg-purple-200 outline-none ring-2 ring-purple-300 ring-offset-2"
                       onClick={closeModal}
                     >
                       Close
