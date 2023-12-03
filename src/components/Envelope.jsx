@@ -6,7 +6,7 @@ import {
   faEnvelope,
   faEnvelopeOpen,
   faPlay,
-  faStop,
+  faPause,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Envelope = () => {
@@ -16,7 +16,7 @@ const Envelope = () => {
   const envelopeClose = <FontAwesomeIcon icon={faEnvelope} />;
   const envelopeOpen = <FontAwesomeIcon icon={faEnvelopeOpen} />;
   const soundPlay = <FontAwesomeIcon icon={faPlay} />;
-  const soundStop = <FontAwesomeIcon icon={faStop} />;
+  const soundStop = <FontAwesomeIcon icon={faPause} />;
 
   const stopAudio = () => {
     setPLay(false);
@@ -26,6 +26,10 @@ const Envelope = () => {
   const playAudio = () => {
     setPLay(true);
     audio.play();
+  };
+
+  audio.onended = function () {
+    setPLay(false);
   };
 
   const closeModal = () => {
@@ -41,14 +45,20 @@ const Envelope = () => {
         <button
           type="button"
           onClick={openModal}
-          className="animate-bounce rounded-md bg-black/20 px-4 py-2 text-2xl font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+          className={
+            "animate-bounce rounded-md bg-black/20 px-4 py-2 text-2xl font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 " +
+            (isOpen ? "border-dashed border-3" : "border-solid border-3")
+          }
         >
           {isOpen ? envelopeOpen : envelopeClose}
         </button>
         <button
           type="button"
           onClick={() => (isPlay ? stopAudio() : playAudio())}
-          className="animate-bounce animation-delay-150 ml-2 rounded-md bg-black/20 px-4 py-2 text-2xl font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+          className={
+            "animate-bounce animation-delay-150 ml-2 rounded-md bg-black/20 px-4 py-2 text-2xl font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 outline-offset-2 " +
+            (isPlay ? "border-dashed border-3" : "border-solid border-3")
+          }
         >
           {isPlay ? soundStop : soundPlay}
         </button>
