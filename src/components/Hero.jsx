@@ -13,7 +13,7 @@ const Hero = () => {
   });
   return (
     <>
-      <img className="md:w-1/4 w-4/5" src={Dit} />
+      <img className="md:w-1/4 w-4/5 img-hero" src={Dit} />
       <span className="font-custom mb-4 md:text-sm text-ss inline-flex items-center rounded-full bg-purple-50 bg-opacity-75 px-2 py-1 font-bold text-purple-700 ring-2 ring-inset ring-purple-700/10 relative ">
         drh. ADITYA WIDYAPRAMITA, M.Sc
         <animated.div style={propsInDrop}>
